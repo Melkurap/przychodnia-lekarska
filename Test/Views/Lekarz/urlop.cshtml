@@ -1,0 +1,54 @@
+﻿@model Test.Models.urlop
+@{
+    ViewBag.Title = "urlop";
+}
+
+<h2>Zgłoś chęć urlopu</h2>
+
+@using (Html.BeginForm("urlop", "Lekarz", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <hr />
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.UrlopId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.UrlopId, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Lekarz, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Lekarz, new { @class = "form-control" })
+        </div>
+    </div>
+
+     <div class="form-group">
+        @Html.LabelFor(m => m.DataOd, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.DataOd, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.DataDo, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.DataDo, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.typUrlopu, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.typUrlopu, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Wyślij" />
+        </div>
+    </div>
+}

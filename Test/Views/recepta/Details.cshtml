@@ -1,0 +1,50 @@
+﻿@model Test.Models.recepta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>recepta</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pacjent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pacjent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NazwaLeku)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NazwaLeku)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IloscOpakowanOrazTalbetek)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IloscOpakowanOrazTalbetek)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.WaznoscRecepty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WaznoscRecepty)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.receptaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

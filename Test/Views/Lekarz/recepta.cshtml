@@ -1,0 +1,55 @@
+﻿@model Test.Models.recepta
+@{
+    ViewBag.Title = "recepta";
+}
+
+<h2>recepta</h2>
+
+@using (Html.BeginForm("dodajrecepte", "Lekarz", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Wypisz Receptę.</h4>
+    <hr />
+    @Html.ValidationSummary()
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.receptaId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.receptaId, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pacjent, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Pacjent, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.NazwaLeku, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.NazwaLeku, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.IloscOpakowanOrazTalbetek, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.IloscOpakowanOrazTalbetek, new { @class = "form-control" })
+        </div>
+    </div>
+    
+     <div class="form-group">
+        @Html.LabelFor(m => m.WaznoscRecepty, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.WaznoscRecepty, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Wyślij" />
+        </div>
+    </div>
+}

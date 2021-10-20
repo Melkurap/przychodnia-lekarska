@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "wizyta";
+}
+
+<h2>Zarządaj pacjentem</h2>
+
+<div class="navbar-collapse ">
+    <li><h4>@Html.ActionLink("Ustal termin wizyty", "termin_wizyty", "Lekarz")</h4></li>
+    <li><h4>@Html.ActionLink("Wyświetl informacje o pacjencie, chorobach itp...", "choroby_pacjenta", "Lekarz")</h4></li>
+    <li><h4>@Html.ActionLink("Zobacz historię leczenia pacjenta", "historia_pacjenta", "Lekarz")</h4></li>
+    <li><h4>@Html.ActionLink("Wystaw receptę", "recepta", "Lekarz")</h4></li>
+    <li><h4>@Html.ActionLink("Wystaw skierowanie", "skierowanie", "Lekarz")</h4></li>
+    <li><h4>@Html.ActionLink("Wystaw zwolnienie lekarskie", "zwolnienia_lekarskie", "Lekarz")</h4></li>
+    <br />
+    <li><h4>@Html.ActionLink("Przejdź do strony głównej", "Index", "Lekarz")</h4></li>
+</div>

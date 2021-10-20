@@ -1,0 +1,48 @@
+﻿@model Test.Models.termin_wizyty
+@{
+    ViewBag.Title = "termin_wizyty";
+}
+
+<h2>termin wizyty</h2>
+
+@using (Html.BeginForm("termin_wizyty", "Recepcjonista", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{ 
+    @Html.AntiForgeryToken()
+    <h4>Ustal datę wizyty dla pacjenta.</h4>
+    <hr />
+    @Html.ValidationSummary()
+ 
+<div class="form-group">
+    @Html.LabelFor(m => m.WizytaId, new { @class = "col-md-2 control-label" })   
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.WizytaId, new { @class = "form-control" })
+    </div>
+</div>        
+    
+<div class="form-group">
+    @Html.LabelFor(m => m.PacjentId, new { @class = "col-md-2 control-label" })   
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.PacjentId, new { @class = "form-control" })
+    </div>
+</div>    
+       
+<div class="form-group">
+    @Html.LabelFor(m => m.DataWizyty, new { @class = "col-md-2 control-label" })   
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.DataWizyty, new { @class = "form-control" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(m => m.NumerSali, new { @class = "col-md-2 control-label" })  
+    <div class="col-md-10">
+        @Html.TextBoxFor(m => m.NumerSali, new { @class = "form-control" })
+    </div>
+</div>
+    
+<div class="form-group">
+     <div class="col-md-offset-2 col-md-10">
+        <input type="submit" class="btn btn-default" value="Wyślij" />
+     </div>
+</div>
+}

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Witaj Specjalisto!</h2>
+<h3>
+    <br />
+    Na tej stronie masz możliwość wprowadzenia danych np. dot. choroby pacjenta, <br />
+     wystawiania recept, zwolnienia lekarskiego, skierowania.
+    <br />
+    <div class="navbar-collapse ">
+       <h3>Menu:</h3>
+       <li><h4>@Html.ActionLink("Pacjent", "wizyta", "Lekarz")</h4></li> 
+       <li><h4>@Html.ActionLink("Urlopy-zgloszenia", "urlop", "Lekarz")</h4></li>
+    </div>
+ </h3>
+

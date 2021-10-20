@@ -1,0 +1,48 @@
+﻿@model Test.Models.zwolnienia_lekarskie
+@{
+    ViewBag.Title = "zwolnienia lekarskie";
+}
+
+<h2>zwolnienia_lekarskie</h2>
+
+@using (Html.BeginForm("zwolnienia_lekarskie", "Lekarz", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    @Html.AntiForgeryToken()
+    <h4>Wystaw zwolnienie lekarskie dla pacjenta.</h4>
+    <hr />
+    @Html.ValidationSummary()
+
+     <div class="form-group">
+        @Html.LabelFor(m => m.ZwolnienieId, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.ZwolnienieId, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Pacjent, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Pacjent, new { @class = "form-control" })
+        </div>
+    </div>
+    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Przyczyna, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Przyczyna, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Okres, new { @class = "col-md-2 control-label" })
+        <div class="col-md-10">
+            @Html.TextBoxFor(m => m.Okres, new { @class = "form-control" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" class="btn btn-default" value="Wyślij" />
+        </div>
+    </div>
+}
